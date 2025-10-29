@@ -562,14 +562,15 @@ a {
 .service-icon {
     width: 64px;
     height: 64px;
-    background: var(--gradient-accent);
+    background: var(--gradient-secondary);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
     font-size: 1.5rem;
-    color: var(--secondary-dark);
+    color: var(--secondary-light);
+    box-shadow: 0 8px 24px rgba(33, 150, 243, 0.3);
 }
 
 .service-card h3 {
