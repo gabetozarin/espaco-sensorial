@@ -363,7 +363,7 @@ a {
 /* Hero Section */
 .hero {
     padding: 8rem 0 4rem;
-    background: var(--background);
+    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
     position: relative;
     overflow: hidden;
 }
@@ -375,7 +375,7 @@ a {
     right: 0;
     width: 50%;
     height: 100%;
-    background: radial-gradient(ellipse at center, rgba(254, 190, 3, 0.04) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(254, 190, 3, 0.1) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -403,7 +403,7 @@ a {
     display: block;
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: var(--font-weight-bold);
-    color: var(--primary-color);
+    color: var(--white);
     margin-bottom: 0.5rem;
 }
 
@@ -411,13 +411,14 @@ a {
     display: block;
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     font-weight: var(--font-weight-medium);
-    color: var(--text-dark);
+    color: var(--primary-color);
 }
 
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     max-width: 90%;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-buttons {
@@ -474,7 +475,7 @@ a {
 
 .scroll-text {
     font-size: 0.875rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
 }
 
