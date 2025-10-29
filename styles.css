@@ -784,7 +784,8 @@ a {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--medium-gray);
+    background: rgba(26, 35, 126, 0.3);
+    border: 2px solid var(--primary-color);
     cursor: pointer;
     transition: var(--transition-normal);
 }
