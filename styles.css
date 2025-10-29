@@ -510,7 +510,7 @@ a {
 
 /* About Section */
 .about {
-    padding: var(--section-padding);
+    padding: 3rem 0;
     background: var(--gradient-section);
 }
 
