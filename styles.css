@@ -1219,6 +1219,10 @@ a {
     .btn {
         width: 100%;
         max-width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     
     .service-card {
@@ -1231,6 +1235,27 @@ a {
     
     .testimonial-content {
         padding: 2rem 1.5rem;
+    }
+    
+    /* Reduzir quadrados animados para mobile */
+    .hero-image-placeholder {
+        width: 120px !important;
+        height: 120px !important;
+        font-size: 3rem !important;
+    }
+    
+    .hero-image-placeholder i {
+        font-size: 3rem !important;
+    }
+    
+    /* Reduzir animação de pulo no mobile */
+    @keyframes gentleJump {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+    }
+    
+    .animated-bg-square.jump-animation {
+        animation: gentleJump 1.2s ease-out infinite;
     }
 }
 
