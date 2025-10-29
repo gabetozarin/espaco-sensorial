@@ -411,44 +411,20 @@ a {
     font-size: 6rem;
     color: var(--white);
     box-shadow: 0 20px 64px rgba(90, 181, 216, 0.2);
-    animation: float 3s ease-in-out infinite;
+    animation: gentleJump 3s ease-in-out infinite;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: var(--text-light);
-    animation: bounce 2s infinite;
+.hero-image-placeholder i {
+    font-size: 6rem;
+    color: var(--white);
 }
 
-.mouse {
-    width: 24px;
-    height: 40px;
-    border: 2px solid var(--primary-color);
-    border-radius: 12px;
-    position: relative;
-    margin: 0 auto 0.5rem;
-}
 
-.wheel {
-    width: 4px;
-    height: 8px;
-    background: var(--primary-color);
-    border-radius: 2px;
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: scroll 2s infinite;
-}
 
 /* About Section */
 .about {
     padding: var(--section-padding);
-    background: var(--surface);
+    background: var(--surface-secondary);
 }
 
 .about-content {
@@ -524,7 +500,7 @@ a {
 /* Services Section */
 .services {
     padding: var(--section-padding);
-    background: var(--surface-secondary);
+    background: var(--surface);
 }
 
 .services-grid {
@@ -595,7 +571,7 @@ a {
 /* Team Section */
 .team {
     padding: var(--section-padding);
-    background: var(--surface);
+    background: var(--surface-secondary);
 }
 
 .team-grid {
@@ -646,7 +622,7 @@ a {
 /* Testimonials Section */
 .testimonials {
     padding: var(--section-padding);
-    background: var(--light-gray);
+    background: var(--surface);
     position: relative;
 }
 
@@ -728,7 +704,7 @@ a {
 /* Contact Section */
 .contact {
     padding: var(--section-padding);
-    background: var(--white);
+    background: var(--surface-secondary);
 }
 
 .contact-content {
@@ -1090,6 +1066,15 @@ a {
     }
     100% {
         transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes gentleJump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
     }
 }
 
