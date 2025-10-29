@@ -10,9 +10,9 @@
     --primary-color: #febe03;
     --primary-light: #fff2cc;
     --primary-dark: #cc9a02;
-    --secondary-color: #4a9eff;
-    --secondary-light: #e6f3ff;
-    --secondary-dark: #2b7dd9;
+    --secondary-color: #2196f3;
+    --secondary-light: #e3f2fd;
+    --secondary-dark: #1976d2;
     
     /* Neutral Palette - Enhanced Contrast */
     --neutral-25: #fcfdfe;
@@ -31,12 +31,12 @@
     
     /* Gradients - High Impact & Chic */
     --gradient-primary: linear-gradient(135deg, #e5a800 0%, #ffd042 100%);
-    --gradient-secondary: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+    --gradient-secondary: linear-gradient(135deg, #2196f3 0%, #64b5f6 100%);
     --gradient-neutral: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
     --gradient-accent: linear-gradient(135deg, #dbeafe 0%, #f0f9ff 100%);
-    --gradient-section: linear-gradient(135deg, var(--neutral-25) 0%, var(--neutral-75) 100%);
-    --gradient-section-blue: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
-    --gradient-section-yellow: linear-gradient(135deg, #fffbf0 0%, #fff7e6 100%);
+    --gradient-section: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    --gradient-section-blue: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    --gradient-section-yellow: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
     
     /* Semantic Colors */
     --white: #ffffff;
@@ -59,7 +59,7 @@
     
     /* Spacing */
     --container-padding: 1rem;
-    --section-padding: 5rem 0;
+    --section-padding: 2rem 0;
     --border-radius: 12px;
     --border-radius-small: 8px;
     --border-radius-large: 20px;
@@ -78,6 +78,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -87,6 +88,29 @@ body {
     color: var(--text-primary);
     background-color: var(--background);
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+/* Full-screen sections with scroll snapping */
+section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Performance optimizations */
+* {
+    will-change: auto;
+}
+
+.hero-image-placeholder,
+.nav-icon,
+.service-card,
+.team-member {
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* Container */
