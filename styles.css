@@ -49,7 +49,7 @@
     --text-muted: var(--neutral-500);
     
     /* Typography */
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
@@ -910,7 +910,8 @@ a {
 }
 
 .footer-section h4 {
-    color: var(--white);
+    color: var(--neutral-800);
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
@@ -922,27 +923,27 @@ a {
 }
 
 .footer-logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: var(--primary-color);
     border-radius: var(--border-radius-small);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .footer-logo-text {
     font-size: 1.25rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--white);
+    font-weight: 700;
+    color: var(--neutral-800);
 }
 
 .footer-description {
-    color: var(--neutral-700);
+    color: var(--neutral-800);
     line-height: 1.6;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .footer-links {
@@ -954,8 +955,8 @@ a {
 }
 
 .footer-links a {
-    color: var(--neutral-700);
-    font-weight: 500;
+    color: var(--neutral-800);
+    font-weight: 600;
     transition: var(--transition-normal);
 }
 
@@ -968,8 +969,8 @@ a {
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
-    color: var(--neutral-700);
-    font-weight: 500;
+    color: var(--neutral-800);
+    font-weight: 600;
 }
 
 .footer-contact i {
@@ -986,8 +987,8 @@ a {
 }
 
 .footer-copyright p {
-    color: var(--neutral-700);
-    font-weight: 500;
+    color: var(--neutral-800);
+    font-weight: 600;
     margin-bottom: 0;
 }
 
