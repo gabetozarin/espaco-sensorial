@@ -31,7 +31,7 @@
     
     /* Gradients - High Impact & Chic */
     --gradient-primary: linear-gradient(135deg, #e5a800 0%, #ffd042 100%);
-    --gradient-secondary: linear-gradient(135deg, #2196f3 0%, #64b5f6 100%);
+    --gradient-secondary: linear-gradient(135deg, #1976d2 0%, #42a5f5 50%, #90caf9 100%);
     --gradient-neutral: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
     --gradient-accent: linear-gradient(135deg, #dbeafe 0%, #f0f9ff 100%);
     --gradient-section: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
