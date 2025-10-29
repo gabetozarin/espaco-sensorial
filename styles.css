@@ -59,7 +59,7 @@
     
     /* Spacing */
     --container-padding: 1rem;
-    --section-padding: 2rem 0;
+    --section-padding: 5rem 0;
     --border-radius: 12px;
     --border-radius-small: 8px;
     --border-radius-large: 20px;
@@ -78,7 +78,6 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -88,16 +87,11 @@ body {
     color: var(--text-primary);
     background-color: var(--background);
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
 }
 
-/* Full-screen sections with scroll snapping */
+/* Sections with normal scrolling */
 section {
-    min-height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    min-height: auto;
 }
 
 /* Performance optimizations */
