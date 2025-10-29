@@ -924,8 +924,9 @@ a {
 .checkmark {
     width: 20px;
     height: 20px;
-    border: 2px solid var(--medium-gray);
+    border: 2px solid var(--primary-color);
     border-radius: 4px;
+    background: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
