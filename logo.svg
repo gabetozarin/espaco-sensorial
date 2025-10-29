@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
     <!-- Background circle -->
-    <circle cx="100" cy="100" r="90" fill="#4a90e2" opacity="0.1"/>
+    <circle cx="100" cy="100" r="90" fill="#febe03" opacity="0.1"/>
     
     <!-- Main logo circle -->
-    <circle cx="100" cy="100" r="70" fill="#4a90e2"/>
+    <circle cx="100" cy="100" r="70" fill="#febe03"/>
     
     <!-- Child figure -->
     <g transform="translate(100, 100)">
@@ -22,16 +22,16 @@
         <ellipse cx="8" cy="18" rx="4" ry="12" fill="#ffffff"/>
         
         <!-- Sensory elements (colorful dots around) -->
-        <circle cx="-35" cy="-15" r="4" fill="#7ed321"/>
-        <circle cx="35" cy="-15" r="4" fill="#f5a623"/>
-        <circle cx="-30" cy="20" r="4" fill="#bd10e0"/>
-        <circle cx="30" cy="20" r="4" fill="#50e3c2"/>
-        <circle cx="0" cy="-45" r="4" fill="#ff6b6b"/>
-        <circle cx="0" cy="45" r="4" fill="#4ecdc4"/>
+        <circle cx="-35" cy="-15" r="4" fill="#b4cf1e"/>
+        <circle cx="35" cy="-15" r="4" fill="#5ab5d8"/>
+        <circle cx="-30" cy="20" r="4" fill="#e5432e"/>
+        <circle cx="30" cy="20" r="4" fill="#b4cf1e"/>
+        <circle cx="0" cy="-45" r="4" fill="#5ab5d8"/>
+        <circle cx="0" cy="45" r="4" fill="#e5432e"/>
     </g>
     
     <!-- Text -->
-    <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4a90e2">
+    <text x="100" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#febe03">
         Espaço Sensorial
     </text>
 </svg>
