@@ -1,0 +1,37 @@
+# GitHub Pages Configuration
+# This file ensures proper deployment to GitHub Pages
+
+# Enable Jekyll processing (optional, for future enhancements)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site settings for GitHub Pages
+title: "Espaço Sensorial - Desenvolvimento Infantil"
+description: "Atendimento personalizado e especializado destinado à promoção do desenvolvimento infantil"
+url: "https://USERNAME.github.io"  # Replace USERNAME with your GitHub username
+baseurl: "/espaco-sensorial"       # Replace with your repository name
+
+# SEO settings
+lang: pt
+author: "Espaço Sensorial"
+twitter:
+  username: espacosensorial
+facebook:
+  publisher: espacosensorial.pt
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .htaccess
+
+# Include files that start with underscore
+include:
+  - .htaccess

@@ -1,0 +1,151 @@
+# Espaço Sensorial - Apache Configuration
+# Performance and Security Optimizations
+
+# Enable Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Enable Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive on
+    
+    # Images
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/eot "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    
+    # HTML
+    ExpiresByType text/html "access plus 1 day"
+    
+    # Default
+    ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# Cache Control Headers
+<IfModule mod_headers.c>
+    # CSS and JS
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2628000"
+    </FilesMatch>
+    
+    # Images
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+        Header set Cache-Control "public, max-age=2628000"
+    </FilesMatch>
+    
+    # Fonts
+    <FilesMatch "\.(woff2|woff|ttf|eot|otf)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+    
+    # Security Headers
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Remove Server Header
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
+# Security - Prevent access to sensitive files
+<Files ~ "^\.(htaccess|htpasswd|ini|log|sh|sql)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Prevent directory browsing
+Options -Indexes
+
+# Custom Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# Force HTTPS (uncomment if using SSL)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# WWW redirect (choose one - with or without www)
+# Redirect to www version
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect to non-www version
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [L,R=301]
+
+# Enable ETags
+FileETag MTime Size
+
+# Charset
+AddDefaultCharset UTF-8
+
+# MIME Types
+<IfModule mod_mime.c>
+    # Web fonts
+    AddType application/font-woff2 .woff2
+    AddType application/font-woff .woff
+    AddType application/vnd.ms-fontobject .eot
+    AddType font/truetype .ttf
+    AddType font/opentype .otf
+    
+    # SVG
+    AddType image/svg+xml .svg .svgz
+    
+    # Web App Manifest
+    AddType application/manifest+json .webmanifest
+    AddType application/x-web-app-manifest+json .webapp
+</IfModule>
+
+# Optimize Performance
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Remove trailing slashes
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{THE_REQUEST} /+[^\s]*?/?(\?[^\s]*)?(\s|\#) [NC]
+    RewriteRule ^(.+?)/?$ /$1 [R=301,L]
+</IfModule>
+
+# Prevent access to version control files
+<FilesMatch "^\.git">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to backup files
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

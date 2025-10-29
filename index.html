@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Sensorial - Desenvolvimento Infantil Especializado</title>
+    <meta name="description" content="Atendimento personalizado e especializado destinado à promoção do desenvolvimento infantil. Terapia ocupacional, psicomotricidade e muito mais.">
+    <meta name="keywords" content="desenvolvimento infantil, terapia ocupacional, psicomotricidade, espaço sensorial, crianças, portugal">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="logo.svg" alt="Espaço Sensorial" class="logo-img" id="logo">
+                    <span class="logo-text">Espaço Sensorial</span>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicos" class="nav-link">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#equipa" class="nav-link">Equipa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">Espaço Sensorial</span>
+                    <span class="title-sub">Desenvolvimento Infantil Especializado</span>
+                </h1>
+                <p class="hero-description">
+                    Atendimento personalizado e especializado destinado à promoção do desenvolvimento infantil. 
+                    Oferecemos um ambiente seguro e estimulante para o crescimento das crianças.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contato" class="btn btn-primary">Agendar Consulta</a>
+                    <a href="#servicos" class="btn btn-secondary">Nossos Serviços</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    <i class="fas fa-child"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Role para baixo</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Nós</h2>
+                <p class="section-subtitle">Dedicados ao desenvolvimento integral da criança</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>A Nossa Missão</h3>
+                    <p>
+                        O Espaço Sensorial é um centro especializado em desenvolvimento infantil, 
+                        onde cada criança é única e merece um atendimento personalizado. 
+                        Trabalhamos com uma abordagem multidisciplinar para promover o 
+                        desenvolvimento integral das crianças.
+                    </p>
+                    
+                    <div class="features">
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Atendimento Personalizado</h4>
+                                <p>Cada criança recebe um plano individual adaptado às suas necessidades específicas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Equipa Especializada</h4>
+                                <p>Profissionais qualificados em diferentes áreas do desenvolvimento infantil.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-home"></i>
+                            <div>
+                                <h4>Ambiente Acolhedor</h4>
+                                <p>Espaço seguro e estimulante, pensado especialmente para as crianças.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Soluções especializadas para o desenvolvimento infantil</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-paper"></i>
+                    </div>
+                    <h3>Terapia Ocupacional</h3>
+                    <p>Desenvolvimento de habilidades motoras finas e coordenação através de atividades lúdicas e terapêuticas.</p>
+                    <ul>
+                        <li>Coordenação motora</li>
+                        <li>Atividades de vida diária</li>
+                        <li>Integração sensorial</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Psicomotricidade</h3>
+                    <p>Estimulação do desenvolvimento motor, cognitivo e afetivo através do movimento e da expressão corporal.</p>
+                    <ul>
+                        <li>Desenvolvimento motor global</li>
+                        <li>Coordenação e equilíbrio</li>
+                        <li>Expressão corporal</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Terapia da Fala</h3>
+                    <p>Desenvolvimento da comunicação, linguagem e capacidades orais através de técnicas especializadas.</p>
+                    <ul>
+                        <li>Desenvolvimento da linguagem</li>
+                        <li>Articulação verbal</li>
+                        <li>Comunicação alternativa</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Psicologia Infantil</h3>
+                    <p>Apoio psicológico especializado para o bem-estar emocional e comportamental das crianças.</p>
+                    <ul>
+                        <li>Avaliação psicológica</li>
+                        <li>Intervenção comportamental</li>
+                        <li>Apoio emocional</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Integração Sensorial</h3>
+                    <p>Terapia especializada para crianças com dificuldades de processamento sensorial.</p>
+                    <ul>
+                        <li>Processamento sensorial</li>
+                        <li>Regulação emocional</li>
+                        <li>Adaptação ambiental</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Apoio Escolar</h3>
+                    <p>Estratégias personalizadas para apoiar o sucesso académico e a adaptação escolar.</p>
+                    <ul>
+                        <li>Dificuldades de aprendizagem</li>
+                        <li>Métodos de estudo</li>
+                        <li>Adaptação escolar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="equipa">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa Equipa</h2>
+                <p class="section-subtitle">Profissionais especializados e dedicados</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Dra. Ana Silva</h3>
+                    <p class="member-role">Terapeuta Ocupacional</p>
+                    <p class="member-description">Especialista em integração sensorial com mais de 10 anos de experiência.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Dra. Maria Santos</h3>
+                    <p class="member-role">Psicóloga Infantil</p>
+                    <p class="member-description">Mestrado em Psicologia do Desenvolvimento e especialização em NEE.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Dra. João Ferreira</h3>
+                    <p class="member-role">Terapeuta da Fala</p>
+                    <p class="member-description">Especialista em comunicação alternativa e distúrbios da linguagem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O Que Dizem de Nós</h2>
+                <p class="section-subtitle">Histórias de sucesso das nossas famílias</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "O Espaço Sensorial mudou a vida do meu filho. A equipa é fantástica e o progresso tem sido notável. 
+                            Recomendo vivamente a todos os pais que procuram um atendimento de qualidade."
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Maria João</span>
+                            <span class="author-role">Mãe do Tomás, 6 anos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Profissionais dedicados e um ambiente acolhedor. A minha filha adora ir às sessões e 
+                            o desenvolvimento dela tem sido extraordinário."
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Pedro Silva</span>
+                            <span class="author-role">Pai da Sofia, 4 anos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Encontramos no Espaço Sensorial o apoio que procurávamos. O atendimento personalizado 
+                            fez toda a diferença no desenvolvimento do nosso filho."
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Ana Costa</span>
+                            <span class="author-role">Mãe do Miguel, 8 anos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacte-nos</h2>
+                <p class="section-subtitle">Estamos aqui para ajudar o seu filho a crescer</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informações de Contacto</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Morada</h4>
+                            <p>Rua das Crianças, nº 123<br>1000-000 Lisboa, Portugal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>+351 21 123 4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>geral@espacosensorial.pt</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 9h00 - 19h00<br>Sábado: 9h00 - 13h00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Siga-nos</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/espacosensorial.pt" target="_blank" rel="noopener">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/espacosensorial.pt/" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envie-nos uma Mensagem</h3>
+                    <form id="contactForm" class="form">
+                        <div class="form-group">
+                            <label for="name">Nome *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="consulta">Agendar Consulta</option>
+                                <option value="informacoes">Pedido de Informações</option>
+                                <option value="avaliacao">Avaliação Inicial</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                Aceito a <a href="#" class="privacy-link">Política de Privacidade</a> *
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-text">Enviar Mensagem</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.svg" alt="Espaço Sensorial" class="footer-logo-img">
+                        <span class="footer-logo-text">Espaço Sensorial</span>
+                    </div>
+                    <p class="footer-description">
+                        Dedicados ao desenvolvimento integral das crianças através de 
+                        atendimento personalizado e especializado.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicos">Terapia Ocupacional</a></li>
+                        <li><a href="#servicos">Psicomotricidade</a></li>
+                        <li><a href="#servicos">Terapia da Fala</a></li>
+                        <li><a href="#servicos">Psicologia Infantil</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Lisboa, Portugal</p>
+                        <p><i class="fas fa-phone"></i> +351 21 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> geral@espacosensorial.pt</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Espaço Sensorial. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/espacosensorial.pt" target="_blank" rel="noopener">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/espacosensorial.pt/" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
