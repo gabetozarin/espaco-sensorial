@@ -32,15 +32,15 @@
     /* Gradients - High Impact & Chic */
     --gradient-primary: linear-gradient(135deg, #e5a800 0%, #ffd042 100%);
     --gradient-secondary: linear-gradient(135deg, #1976d2 0%, #42a5f5 50%, #90caf9 100%);
-    --gradient-neutral: linear-gradient(135deg, #e2e8f0 0%, #ffffff 100%);
+    --gradient-neutral: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
     --gradient-accent: linear-gradient(135deg, #dbeafe 0%, #f0f9ff 100%);
-    --gradient-section: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    --gradient-section: linear-gradient(135deg, #f0f9ff 0%, #e3f2fd 100%);
     --gradient-section-blue: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
     --gradient-section-yellow: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
     
     /* Semantic Colors */
     --white: #ffffff;
-    --background: var(--neutral-50);
+    --background: #fafcff;
     --surface: var(--white);
     --surface-secondary: var(--neutral-100);
     --border: var(--neutral-200);
@@ -788,7 +788,7 @@ a {
 /* Contact Section */
 .contact {
     padding: var(--section-padding);
-    background: var(--gradient-section);
+    background: var(--gradient-accent);
 }
 
 .contact-content {
@@ -947,7 +947,7 @@ a {
 
 /* Footer */
 .footer {
-    background: var(--text-dark);
+    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
     color: var(--white);
     padding: 3rem 0 1rem;
 }
