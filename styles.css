@@ -14,29 +14,29 @@
     --secondary-light: #e3f2fd;
     --secondary-dark: #1976d2;
     
-    /* Neutral Palette - Enhanced Contrast */
+    /* Blue-Based Palette - No Black/Gray */
     --neutral-25: #fcfdfe;
-    --neutral-50: #fafbfc;
-    --neutral-75: #f7f9fb;
-    --neutral-100: #f4f6f8;
-    --neutral-150: #eef2f6;
-    --neutral-200: #e1e8ed;
-    --neutral-300: #d0dae2;
-    --neutral-400: #8fa8b2;
-    --neutral-500: #5e7079;
-    --neutral-600: #425a65;
-    --neutral-700: #2d3e45;
-    --neutral-800: #1a2b3d;
-    --neutral-900: #0f1924;
+    --neutral-50: #f8fafc;
+    --neutral-75: #f1f5f9;
+    --neutral-100: #e2e8f0;
+    --neutral-150: #cbd5e1;
+    --neutral-200: #94a3b8;
+    --neutral-300: #64748b;
+    --neutral-400: #475569;
+    --neutral-500: #334155;
+    --neutral-600: #1e293b;
+    --neutral-700: #0f172a;
+    --neutral-800: #020617;
+    --neutral-900: #020617;
     
     /* Gradients - High Impact & Chic */
     --gradient-primary: linear-gradient(135deg, #e5a800 0%, #ffd042 100%);
     --gradient-secondary: linear-gradient(135deg, #1976d2 0%, #42a5f5 50%, #90caf9 100%);
-    --gradient-neutral: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+    --gradient-neutral: linear-gradient(135deg, #e2e8f0 0%, #ffffff 100%);
     --gradient-accent: linear-gradient(135deg, #dbeafe 0%, #f0f9ff 100%);
-    --gradient-section: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    --gradient-section-blue: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-    --gradient-section-yellow: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    --gradient-section: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    --gradient-section-blue: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    --gradient-section-yellow: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
     
     /* Semantic Colors */
     --white: #ffffff;
@@ -44,7 +44,7 @@
     --surface: var(--white);
     --surface-secondary: var(--neutral-100);
     --border: var(--neutral-200);
-    --text-primary: var(--neutral-800);
+    --text-primary: var(--neutral-700);
     --text-secondary: var(--neutral-600);
     --text-muted: var(--neutral-500);
     
@@ -921,11 +921,16 @@ a {
     margin-bottom: 1rem;
 }
 
-.footer-logo-img {
+.footer-logo-icon {
     width: 40px;
     height: 40px;
-    object-fit: contain;
+    background: var(--primary-color);
     border-radius: var(--border-radius-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.25rem;
 }
 
 .footer-logo-text {
@@ -935,8 +940,9 @@ a {
 }
 
 .footer-description {
-    color: #bbb;
+    color: var(--neutral-700);
     line-height: 1.6;
+    font-weight: 500;
 }
 
 .footer-links {
@@ -948,12 +954,13 @@ a {
 }
 
 .footer-links a {
-    color: #bbb;
+    color: var(--neutral-700);
+    font-weight: 500;
     transition: var(--transition-normal);
 }
 
 .footer-links a:hover {
-    color: var(--white);
+    color: var(--secondary-color);
 }
 
 .footer-contact p {
@@ -961,7 +968,8 @@ a {
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
-    color: #bbb;
+    color: var(--neutral-700);
+    font-weight: 500;
 }
 
 .footer-contact i {
@@ -974,11 +982,12 @@ a {
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
-    border-top: 1px solid #444;
+    border-top: 1px solid var(--neutral-200);
 }
 
 .footer-copyright p {
-    color: #bbb;
+    color: var(--neutral-700);
+    font-weight: 500;
     margin-bottom: 0;
 }
 
@@ -1283,7 +1292,7 @@ textarea:focus {
     :root {
         --primary-color: #0066cc;
         --text-dark: var(--neutral-900);
-        --text-light: #333333;
+        --text-light: var(--neutral-700);
     }
 }
 
