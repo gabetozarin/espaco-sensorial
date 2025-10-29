@@ -6,13 +6,13 @@
 }
 
 :root {
-    /* Color Palette - Refined & Professional */
+    /* Color Palette - Harmonious & Professional */
     --primary-color: #febe03;
     --primary-light: #fff2cc;
     --primary-dark: #cc9a02;
-    --secondary-color: #5ab5d8;
-    --secondary-light: #e8f4f8;
-    --secondary-dark: #3a9bc1;
+    --secondary-color: #4a9eff;
+    --secondary-light: #e6f3ff;
+    --secondary-dark: #2b7dd9;
     
     /* Neutral Palette */
     --neutral-50: #fafbfc;
@@ -26,11 +26,11 @@
     --neutral-800: #1a252b;
     --neutral-900: #0f1419;
     
-    /* Gradients - Subtle & Refined */
-    --gradient-primary: linear-gradient(135deg, #febe03 0%, #ffcd3a 100%);
-    --gradient-secondary: linear-gradient(135deg, #5ab5d8 0%, #7bc5e0 100%);
-    --gradient-neutral: linear-gradient(135deg, #f4f6f8 0%, #ffffff 100%);
-    --gradient-accent: linear-gradient(135deg, #e8f4f8 0%, #f0f8fc 100%);
+    /* Gradients - Enhanced Visibility */
+    --gradient-primary: linear-gradient(135deg, #e5a800 0%, #ffcd3a 100%);
+    --gradient-secondary: linear-gradient(135deg, #2b7dd9 0%, #6bb3ff 100%);
+    --gradient-neutral: linear-gradient(135deg, #f0f2f5 0%, #ffffff 100%);
+    --gradient-accent: linear-gradient(135deg, #ddeeff 0%, #f4f9ff 100%);
     
     /* Semantic Colors */
     --white: #ffffff;
