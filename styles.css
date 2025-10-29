@@ -948,6 +948,8 @@ a {
 .privacy-link {
     color: var(--primary-color);
     text-decoration: underline;
+    margin: 0;
+    padding: 0;
 }
 
 .privacy-link:hover {
