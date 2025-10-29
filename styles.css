@@ -14,23 +14,29 @@
     --secondary-light: #e6f3ff;
     --secondary-dark: #2b7dd9;
     
-    /* Neutral Palette */
+    /* Neutral Palette - Enhanced Contrast */
+    --neutral-25: #fcfdfe;
     --neutral-50: #fafbfc;
+    --neutral-75: #f7f9fb;
     --neutral-100: #f4f6f8;
+    --neutral-150: #eef2f6;
     --neutral-200: #e1e8ed;
     --neutral-300: #d0dae2;
     --neutral-400: #8fa8b2;
     --neutral-500: #5e7079;
     --neutral-600: #425a65;
     --neutral-700: #2d3e45;
-    --neutral-800: #1a252b;
-    --neutral-900: #0f1419;
+    --neutral-800: #1a2b3d;
+    --neutral-900: #0f1924;
     
-    /* Gradients - Enhanced Visibility */
-    --gradient-primary: linear-gradient(135deg, #e5a800 0%, #ffcd3a 100%);
-    --gradient-secondary: linear-gradient(135deg, #2b7dd9 0%, #6bb3ff 100%);
-    --gradient-neutral: linear-gradient(135deg, #f0f2f5 0%, #ffffff 100%);
-    --gradient-accent: linear-gradient(135deg, #ddeeff 0%, #f4f9ff 100%);
+    /* Gradients - High Impact & Chic */
+    --gradient-primary: linear-gradient(135deg, #e5a800 0%, #ffd042 100%);
+    --gradient-secondary: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+    --gradient-neutral: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+    --gradient-accent: linear-gradient(135deg, #dbeafe 0%, #f0f9ff 100%);
+    --gradient-section: linear-gradient(135deg, var(--neutral-25) 0%, var(--neutral-75) 100%);
+    --gradient-section-blue: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+    --gradient-section-yellow: linear-gradient(135deg, #fffbf0 0%, #fff7e6 100%);
     
     /* Semantic Colors */
     --white: #ffffff;
@@ -206,17 +212,7 @@ a {
     display: inline-block;
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3rem;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    border-radius: 2px;
-}
+
 
 .section-subtitle {
     font-size: 1.1rem;
@@ -260,6 +256,19 @@ a {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(90, 181, 216, 0.2);
 }
 
 .logo-img {
@@ -430,7 +439,7 @@ a {
 /* About Section */
 .about {
     padding: var(--section-padding);
-    background: var(--surface-secondary);
+    background: var(--gradient-section);
 }
 
 .about-content {
@@ -493,20 +502,21 @@ a {
 .image-placeholder {
     width: 300px;
     height: 300px;
-    background: var(--primary-color);
+    background: var(--gradient-primary);
     border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 4rem;
-    color: var(--neutral-900);
-    box-shadow: 0 16px 48px rgba(254, 190, 3, 0.2);
+    color: var(--white);
+    box-shadow: 0 16px 48px rgba(254, 190, 3, 0.3);
+    animation: gentleJump 3.5s ease-in-out infinite;
 }
 
 /* Services Section */
 .services {
     padding: var(--section-padding);
-    background: var(--surface);
+    background: var(--gradient-section-blue);
 }
 
 .services-grid {
@@ -526,8 +536,8 @@ a {
 }
 
 .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
     border-color: var(--primary-color);
 }
 
@@ -577,7 +587,7 @@ a {
 /* Team Section */
 .team {
     padding: var(--section-padding);
-    background: var(--surface-secondary);
+    background: var(--neutral-75);
 }
 
 .team-grid {
@@ -628,7 +638,7 @@ a {
 /* Testimonials Section */
 .testimonials {
     padding: var(--section-padding);
-    background: var(--surface);
+    background: var(--gradient-section-yellow);
     position: relative;
 }
 
@@ -710,7 +720,7 @@ a {
 /* Contact Section */
 .contact {
     padding: var(--section-padding);
-    background: var(--surface-secondary);
+    background: var(--gradient-section);
 }
 
 .contact-content {
@@ -1206,7 +1216,7 @@ a {
     
     * {
         background: transparent !important;
-        color: black !important;
+        color: var(--neutral-900) !important;
         box-shadow: none !important;
     }
     
@@ -1254,7 +1264,7 @@ textarea:focus {
 @media (prefers-contrast: high) {
     :root {
         --primary-color: #0066cc;
-        --text-dark: #000000;
+        --text-dark: var(--neutral-900);
         --text-light: #333333;
     }
 }
