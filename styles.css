@@ -32,6 +32,7 @@
     /* Gradients - High Impact & Chic */
     --gradient-primary: linear-gradient(135deg, #e5a800 0%, #ffd042 100%);
     --gradient-secondary: linear-gradient(135deg, #1976d2 0%, #42a5f5 50%, #90caf9 100%);
+    --gradient-yellow-bright: linear-gradient(135deg, #ffd042 0%, #ffeb3b 50%, #fff176 100%);
     --gradient-neutral: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
     --gradient-accent: linear-gradient(135deg, #dbeafe 0%, #f0f9ff 100%);
     --gradient-section: linear-gradient(135deg, #f0f9ff 0%, #e3f2fd 100%);
@@ -358,7 +359,7 @@ a {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    padding: 8rem 0 6rem;
+    padding: 6rem 0 8rem;
     background: linear-gradient(135deg, #0d1359 0%, #1a237e 50%, #283593 100%);
     position: relative;
     overflow: hidden;
@@ -415,9 +416,9 @@ a {
 }
 
 .hero-description {
-    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
     margin-bottom: 1rem;
-    max-width: 75%;
+    max-width: 85%;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.4;
 }
@@ -577,14 +578,14 @@ a {
 .image-placeholder {
     width: 300px;
     height: 300px;
-    background: var(--gradient-primary);
+    background: var(--gradient-yellow-bright);
     border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 4rem;
-    color: var(--white);
-    box-shadow: 0 16px 48px rgba(254, 190, 3, 0.3);
+    color: #1a237e;
+    box-shadow: 0 16px 48px rgba(255, 235, 59, 0.4), 0 0 20px rgba(255, 235, 59, 0.2);
     animation: gentleJump 1.8s ease-out infinite;
 }
 
