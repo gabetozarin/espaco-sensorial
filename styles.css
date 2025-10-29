@@ -191,9 +191,9 @@ a {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #fff176 0%, #ffff8d 100%);
+    background: linear-gradient(135deg, #ffeb3b 0%, #ffd54f 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 255, 141, 0.6);
+    box-shadow: 0 8px 24px rgba(255, 213, 79, 0.5);
 }
 
 .btn-secondary {
