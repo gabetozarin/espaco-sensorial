@@ -357,10 +357,13 @@ a {
 
 /* Hero Section */
 .hero {
+    min-height: 100vh;
     padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+    background: linear-gradient(135deg, #0d1359 0%, #1a237e 50%, #283593 100%);
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .hero::before {
@@ -370,7 +373,7 @@ a {
     right: 0;
     width: 50%;
     height: 100%;
-    background: radial-gradient(ellipse at center, rgba(254, 190, 3, 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(254, 190, 3, 0.05) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -1213,6 +1216,7 @@ a {
     }
     
     .hero {
+        min-height: 100vh;
         padding: 6rem 0 3rem;
     }
     
@@ -1349,6 +1353,7 @@ a {
     }
     
     .hero {
+        min-height: 100vh;
         padding: 2rem 0;
     }
 }
