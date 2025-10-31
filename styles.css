@@ -742,12 +742,12 @@ a {
     position: absolute;
     width: 100%;
     opacity: 0;
-    transform: translateX(100%) rotateY(-20deg) scale(0.95);
+    transform: translateX(100%) rotateY(-8deg) scale(0.98);
     transform-origin: center center;
     backface-visibility: hidden;
     text-align: center;
     padding: 2rem;
-    transition: transform 0.6s cubic-bezier(.2,.9,.26,1), opacity 0.45s ease-in-out;
+    transition: transform 0.5s cubic-bezier(.2,.9,.26,1), opacity 0.4s ease-in-out;
 }
 
 .testimonial.active {
@@ -757,7 +757,14 @@ a {
 }
 
 .testimonial.prev {
-    transform: translateX(-100%) rotateY(20deg) scale(0.95);
+    opacity: 0;
+    transform: translateX(-100%) rotateY(8deg) scale(0.98);
+    z-index: 1;
+}
+
+.testimonial.next {
+    opacity: 0;
+    transform: translateX(100%) rotateY(-8deg) scale(0.98);
     z-index: 1;
 }
 
