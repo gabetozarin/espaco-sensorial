@@ -179,7 +179,7 @@ function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form data
@@ -192,11 +192,29 @@ function initContactForm() {
 
             // Basic form validation
             if (validateForm(formObject)) {
-                // Show success message
-                showMessage('Mensagem enviada com sucesso! Entraremos em contacto brevemente.', 'success');
-                
-                // Reset form
-                contactForm.reset();
+                try {
+                    // Submit to Formspree
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        // Show success message
+                        showMessage('Mensagem enviada com sucesso! Entraremos em contacto brevemente.', 'success');
+                        
+                        // Reset form
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    showMessage('Erro ao enviar mensagem. Tente novamente mais tarde.', 'error');
+                }
             }
         });
     }

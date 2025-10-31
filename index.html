@@ -409,7 +409,7 @@
                 
                 <div class="contact-form">
                     <h3>Envie-nos uma Mensagem</h3>
-                    <form id="contactForm" class="form">
+                    <form id="contactForm" class="form" action="https://formspree.io/f/xdkozowv" method="POST">
                         <div class="form-group">
                             <label for="name">Nome *</label>
                             <input type="text" id="name" name="name" required>
@@ -448,6 +448,11 @@
                                 Aceito a Política de Privacidade *
                             </label>
                         </div>
+                        
+                        <!-- Hidden fields for Formspree -->
+                        <input type="hidden" name="_subject" value="Nova mensagem do site Espaço Sensorial">
+                        <input type="hidden" name="_next" value="https://gabetozarin.github.io/espaco-sensorial">
+                        <input type="text" name="_gotcha" style="display:none">
                         
                         <button type="submit" class="btn btn-primary btn-full">
                             <span class="btn-text">Enviar Mensagem</span>
