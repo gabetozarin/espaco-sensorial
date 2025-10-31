@@ -817,7 +817,7 @@ a {
 
 /* Contact Section */
 .contact {
-    padding: var(--section-padding);
+    padding: 8rem 0 5rem;
     background: var(--gradient-accent);
 }
 
