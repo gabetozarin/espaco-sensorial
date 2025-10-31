@@ -26,36 +26,8 @@ espaco_sensorial_site/
 ## 🚀 Como Usar
 
 ### 📱 **Visualização Local**
-1. **Abrir o Website**:
+**Abrir o Website**:
    - Abra o arquivo `index.html` em qualquer navegador web moderno
-
-### 🌐 **Hospedagem no GitHub Pages (GRATUITA)**
-1. **Criar Repositório no GitHub**:
-   - Vá para https://github.com e faça login
-   - Clique em "New repository"
-   - Nome: `espaco-sensorial` (ou outro nome de sua escolha)
-   - Marque como "Public"
-   - NÃO adicione README, .gitignore ou license (já temos)
-
-2. **Enviar código para o GitHub**:
-   ```bash
-   git add .
-   git commit -m "Website inicial do Espaço Sensorial"
-   git branch -M main
-   git remote add origin https://github.com/SEUUSERNAME/espaco-sensorial.git
-   git push -u origin main
-   ```
-
-3. **Ativar GitHub Pages**:
-   - No repositório do GitHub, vá em "Settings"
-   - Role até "Pages" no menu lateral
-   - Em "Source", selecione "Deploy from a branch"
-   - Escolha "main" branch e "/ (root)"
-   - Clique em "Save"
-
-4. **Acessar Website**:
-   - URL será: `https://SEUUSERNAME.github.io/espaco-sensorial`
-   - Demora 2-5 minutos para ficar disponível
 
 ### ✏️ **Personalização**
 - **Logo**: Substitua `logo.svg` pelo logo oficial em alta definição
