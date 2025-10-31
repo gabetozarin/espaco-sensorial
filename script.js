@@ -124,24 +124,22 @@ function initTestimonialSlider() {
         if (target >= testimonials.length) target = 0;
         if (target < 0) target = testimonials.length - 1;
 
-        // determine direction (forward or backward)
-        const old = currentSlide;
-        const forward = (target > old) || (old === testimonials.length - 1 && target === 0);
-
         // clear all classes first
         testimonials.forEach(t => {
             t.classList.remove('active', 'prev', 'next');
         });
         dots.forEach(dot => dot.classList.remove('active'));
 
-        // set the new active slide
+        // stack all testimonials underneath (next state)
+        testimonials.forEach((testimonial, index) => {
+            if (index !== target) {
+                testimonial.classList.add('next');
+            }
+        });
+
+        // set the active card on top
         testimonials[target].classList.add('active');
         dots[target].classList.add('active');
-
-        // if there was a previous slide and it's different, animate it out
-        if (old !== target && testimonials[old]) {
-            testimonials[old].classList.add(forward ? 'prev' : 'next');
-        }
 
         // update current index
         currentSlide = target;
