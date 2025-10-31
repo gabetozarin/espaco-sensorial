@@ -218,7 +218,7 @@ a {
 /* Section Headers */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .section-title {
@@ -731,49 +731,29 @@ a {
 
 .testimonials-slider {
     max-width: 800px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
     position: relative;
-    min-height: 420px;
+    min-height: 450px;
     overflow: visible;
-    perspective: 1200px;
 }
 
 .testimonial {
     position: absolute;
     width: 100%;
-    opacity: 1;
-    transform: translateY(10px) translateX(2px) rotateX(-5deg) rotateZ(-1deg) scale(0.98);
-    transform-origin: center center;
-    backface-visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
     text-align: center;
     padding: 2rem;
-    transition: all 0.8s cubic-bezier(.4,.1,.2,1);
-    z-index: 2;
+    transition: all 0.6s ease-in-out;
 }
 
 .testimonial.active {
     opacity: 1;
-    transform: translateY(0) translateX(0) rotateX(0deg) rotateZ(0deg) scale(1);
-    z-index: 10;
-}
-
-.testimonial.leaving {
-    opacity: 0;
-    transform: translateY(-150px) translateX(-80px) rotateX(25deg) rotateZ(15deg) scale(0.7);
-    z-index: 15;
-    transition: all 1.2s cubic-bezier(.6,.1,.4,1);
+    transform: translateX(0);
 }
 
 .testimonial.prev {
-    opacity: 0.8;
-    transform: translateY(15px) translateX(4px) rotateX(-8deg) rotateZ(-2deg) scale(0.96);
-    z-index: 3;
-}
-
-.testimonial.next {
-    opacity: 0.6;
-    transform: translateY(20px) translateX(6px) rotateX(-12deg) rotateZ(-3deg) scale(0.94);
-    z-index: 1;
+    transform: translateX(-100%);
 }
 
 .testimonial-content {
@@ -817,7 +797,7 @@ a {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .dot {

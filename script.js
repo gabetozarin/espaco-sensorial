@@ -119,52 +119,19 @@ function initTestimonialSlider() {
     let slideInterval;
 
     function showSlide(n) {
-        // normalize target index
-        let target = n;
-        if (target >= testimonials.length) target = 0;
-        if (target < 0) target = testimonials.length - 1;
-
-        const oldSlide = currentSlide;
+        testimonials.forEach(testimonial => {
+            testimonial.classList.remove('active');
+        });
         
-        // if same slide, do nothing
-        if (target === oldSlide) return;
-
-        // first animate the current card away (lifting it up and to the side)
-        if (testimonials[oldSlide]) {
-            testimonials[oldSlide].classList.remove('active');
-            testimonials[oldSlide].classList.add('leaving');
-            
-            // after animation, move it to back of stack
-            setTimeout(() => {
-                testimonials[oldSlide].classList.remove('leaving');
-                testimonials[oldSlide].classList.add('next');
-            }, 600);
-        }
-
-        // clear dots
-        dots.forEach(dot => dot.classList.remove('active'));
-
-        // arrange the deck: target becomes active, others stack behind
-        testimonials.forEach((testimonial, index) => {
-            testimonial.classList.remove('active', 'prev', 'next');
-            
-            if (index === target) {
-                // new active card (revealed from underneath)
-                testimonial.classList.add('active');
-            } else if (index === (target + 1) % testimonials.length) {
-                // next card in line
-                testimonial.classList.add('prev');
-            } else {
-                // rest of the deck
-                testimonial.classList.add('next');
-            }
+        dots.forEach(dot => {
+            dot.classList.remove('active');
         });
 
-        // update dot indicator
-        dots[target].classList.add('active');
+        if (n >= testimonials.length) currentSlide = 0;
+        if (n < 0) currentSlide = testimonials.length - 1;
 
-        // update current index
-        currentSlide = target;
+        testimonials[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
     }
 
     function nextSlide() {
@@ -180,7 +147,7 @@ function initTestimonialSlider() {
 
     function resetSlideTimer() {
         clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 8000);
+        slideInterval = setInterval(nextSlide, 5000);
     }
 
     // Add click events to dots
@@ -188,8 +155,8 @@ function initTestimonialSlider() {
         dot.addEventListener('click', () => currentSlideFunc(index + 1));
     });
 
-    // Auto-slide functionality (slower timing for readability)
-    slideInterval = setInterval(nextSlide, 8000);
+    // Auto-slide functionality
+    slideInterval = setInterval(nextSlide, 5000);
 
     // Pause auto-slide on hover
     const testimonialSection = document.querySelector('.testimonials-slider');
@@ -199,7 +166,7 @@ function initTestimonialSlider() {
         });
 
         testimonialSection.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(nextSlide, 8000);
+            resetSlideTimer();
         });
     }
 
