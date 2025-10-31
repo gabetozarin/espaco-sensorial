@@ -119,19 +119,38 @@ function initTestimonialSlider() {
     let slideInterval;
 
     function showSlide(n) {
-        testimonials.forEach(testimonial => {
-            testimonial.classList.remove('active');
-        });
-        
-        dots.forEach(dot => {
-            dot.classList.remove('active');
-        });
+        // normalize target index
+        let target = n;
+        if (target >= testimonials.length) target = 0;
+        if (target < 0) target = testimonials.length - 1;
 
-        if (n >= testimonials.length) currentSlide = 0;
-        if (n < 0) currentSlide = testimonials.length - 1;
+        // determine direction (forward or backward)
+        const old = currentSlide;
+        const forward = (target > old) || (old === testimonials.length - 1 && target === 0);
 
-        testimonials[currentSlide].classList.add('active');
-        dots[currentSlide].classList.add('active');
+        // clear classes
+        testimonials.forEach(t => {
+            t.classList.remove('active', 'prev', 'next');
+        });
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // if no change, just set active
+        if (old === target) {
+            testimonials[target].classList.add('active');
+            dots[target].classList.add('active');
+            currentSlide = target;
+            return;
+        }
+
+        // set exit position for the old slide
+        testimonials[old].classList.add(forward ? 'prev' : 'next');
+
+        // set the new active slide (it will animate into place)
+        testimonials[target].classList.add('active');
+        dots[target].classList.add('active');
+
+        // update current index
+        currentSlide = target;
     }
 
     function nextSlide() {
