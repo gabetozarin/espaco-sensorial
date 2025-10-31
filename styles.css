@@ -741,31 +741,38 @@ a {
 .testimonial {
     position: absolute;
     width: 100%;
-    opacity: 0;
-    transform: translateY(20px) rotateX(-15deg) scale(0.95);
-    transform-origin: center bottom;
+    opacity: 1;
+    transform: translateY(10px) translateX(2px) rotateX(-5deg) rotateZ(-1deg) scale(0.98);
+    transform-origin: center center;
     backface-visibility: hidden;
     text-align: center;
     padding: 2rem;
-    transition: all 0.6s cubic-bezier(.2,.9,.26,1);
-    z-index: 1;
+    transition: all 0.8s cubic-bezier(.4,.1,.2,1);
+    z-index: 2;
 }
 
 .testimonial.active {
     opacity: 1;
-    transform: translateY(0) rotateX(0deg) scale(1);
+    transform: translateY(0) translateX(0) rotateX(0deg) rotateZ(0deg) scale(1);
     z-index: 10;
 }
 
+.testimonial.leaving {
+    opacity: 0;
+    transform: translateY(-150px) translateX(-80px) rotateX(25deg) rotateZ(15deg) scale(0.7);
+    z-index: 15;
+    transition: all 1.2s cubic-bezier(.6,.1,.4,1);
+}
+
 .testimonial.prev {
-    opacity: 0.3;
-    transform: translateY(10px) rotateX(-8deg) scale(0.97);
-    z-index: 2;
+    opacity: 0.8;
+    transform: translateY(15px) translateX(4px) rotateX(-8deg) rotateZ(-2deg) scale(0.96);
+    z-index: 3;
 }
 
 .testimonial.next {
-    opacity: 0;
-    transform: translateY(30px) rotateX(-20deg) scale(0.9);
+    opacity: 0.6;
+    transform: translateY(20px) translateX(6px) rotateX(-12deg) rotateZ(-3deg) scale(0.94);
     z-index: 1;
 }
 
